@@ -1,60 +1,71 @@
 # AWSLeakBuster
 
-**AWSLeakBuster** is a command-line tool for scanning AWS accounts for potentially sensitive data that is often overlooked or unintentionally exposed.  
-It focuses on identifying risks in services like:
+**AWSLeakBuster** is a command-line tool for scanning AWS accounts for potentially sensitive data that is often overlooked or unintentionally exposed.
+
+It focuses on identifying risky content in:
 
 - AWS Systems Manager Parameter Store (SSM)
 - AWS Secrets Manager
 - Lambda environment variables and function code
 - EC2 User Data
-- (and more to come)
-
-## ⚙️ Features
-
-- Uses AWS CLI profiles (`~/.aws/credentials`)
-- Modular structure: easy to extend with new scanners
-- CLI interface with optional scan filters
-- Clear, human-readable output (and machine-friendly exports coming soon)
-
-## 🚀 Usage
-
-```bash
-python cli.py --profile <aws-profile> --scan ssm
-
-You can scan multiple modules at once:
-python cli.py --profile <aws-profile> --scan ssm secrets lambda
+- (More coming soon...)
 
 ## 🔍 Purpose
 
 AWSLeakBuster helps penetration testers, auditors, and cloud engineers spot misconfigurations and secrets left in AWS services that may expose sensitive data.  
 It uses the AWS CLI configuration (`~/.aws/credentials`) to connect via named profiles.
 
----
+## ⚙️ Features
+
+- Modular architecture (easy to extend)
+- CLI with selective scan options
+- Designed for offline/whitebox use
+- Simple text output (machine-readable export planned)
+
+## 🚀 Usage
+
+```bash
+python cli.py --profile <aws-profile> --scan ssm
+```
+
+Scan multiple sources at once:
+
+```bash
+python cli.py --profile <aws-profile> --scan ssm secrets lambda
+```
+
 ## 📁 Example Output
 
-/my-app/config/password: <secure string – access denied>
-/prod/lambda/API_KEY=abcd1234
+```
+/prod/db-password: <secure string – access denied>
+
+/my-lambda/API_KEY=abcd1234
+```
 
 ## 📦 Installation
 
-1. Clone this repository:
-
-git clone https://github.com/<your-username>/AWSLeakBuster.git
-cd AWSLeakBuster
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/kultgestalt666/AWSLeakBuster.git
+   cd AWSLeakBuster
+   ```
 
 2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-pip install -r requirements.txt
+## 🧪 Project Status
 
-## 🧪 Status
+This is a **personal project in early development**.  
+Basic modules work, more are in progress. Functionality and stability will improve over time.
 
-This project is still in early development. Basic functionality works, and new modules are being added step-by-step.
+## 🙋‍♂️ Disclaimer
 
-🙋‍♂️ Disclaimer
+I'm not a professional developer – just someone who enjoys breaking cloud things in a responsible way.
 
-I'm not a professional software engineer – just someone with a strong interest in AWS security and automation.
-This tool is developed and maintained as a learning project, and while I'm doing my best to keep it clean and useful, I may not be able to provide in-depth support for all edge cases or environments.
-Use at your own discretion. Contributions welcome! 😊
+This tool is built for fun and learning. I can’t guarantee it works perfectly in all environments or provide deep support for special edge cases.  
+**Use at your own risk. Pull requests and feedback are welcome.**
 
 ## 📄 License
 
