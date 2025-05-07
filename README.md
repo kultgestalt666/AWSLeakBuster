@@ -24,6 +24,12 @@ python cli.py --profile <aws-profile> --scan ssm
 You can scan multiple modules at once:
 python cli.py --profile <aws-profile> --scan ssm secrets lambda
 
+## 🔍 Purpose
+
+AWSLeakBuster helps penetration testers, auditors, and cloud engineers spot misconfigurations and secrets left in AWS services that may expose sensitive data.  
+It uses the AWS CLI configuration (`~/.aws/credentials`) to connect via named profiles.
+
+---
 ## 📁 Example Output
 
 /my-app/config/password: <secure string – access denied>
