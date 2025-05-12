@@ -1,0 +1,20 @@
+# Python cache & bytecode
+__pycache__/
+*.pyc
+
+# Editor & IDE configs
+.vscode/
+.idea/
+*.swp
+
+# Lambda code downloads (standard output folder)
+lambda/
+glue/
+
+# Temp ZIPs (just in case)
+*.zip
+
+# OS-specific junk
+.DS_Store
+Thumbs.db
+
