@@ -30,9 +30,7 @@ python cli.py --profile <aws-profile> --scan ssm
 
 Scan multiple sources at once:
 
-```bash
-python cli.py --profile <aws-profile> --scan ssm secrets lambda
-```
+TODO
 
 ## 📁 Example Output
 
