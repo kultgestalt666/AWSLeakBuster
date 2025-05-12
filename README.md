@@ -25,13 +25,13 @@ It uses the AWS CLI configuration (`~/.aws/credentials`) to connect via named pr
 ## 🚀 Usage
 
 ```bash
-python cli.py --profile <aws-profile> --scan ssm
+python cli.py --profile <aws-profile> --scan ssm-parameters
 ```
 
 Scan multiple sources at once:
 
 ```bash
-python cli.py --profile <aws-profile> --scan ssm secrets lambda
+python cli.py --profile <aws-profile> --scan ssm-parameters ec2
 ```
 
 ## 📁 Example Output
