@@ -34,14 +34,6 @@ Scan multiple sources at once:
 python cli.py --profile <aws-profile> --scan ssm-parameters ec2
 ```
 
-## 📁 Example Output
-
-```
-/prod/db-password: <secure string – access denied>
-
-/my-lambda/API_KEY=abcd1234
-```
-
 ## 📦 Installation
 
 1. Clone the repository:
