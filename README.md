@@ -61,7 +61,7 @@ python cli.py --profile <aws-profile> --scan ssm-parameters ec2
 | `ecs`            | Inspect ECS tasks for environment secrets, exec access, and logging        |
 | `beanstalk`      | Read Elastic Beanstalk environment variables                               |
 | `snapshots`      | Identify publicly exposed EBS and RDS snapshots                            |
-| `cloudformation` | List IAM roles passed to CloudFormation stacks                             |
+| `cloudformation` | Dump visible parameters and stack outputs in CloudFormation stacks         |
 | `glue-env`       | Extract Glue job settings and linked secrets                               |
 | `glue-code`      | Download Glue job scripts from S3                                          |
 | `codebuild`      | Analyze CodeBuild projects for privilege escalation and secrets            |

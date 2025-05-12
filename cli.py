@@ -17,7 +17,7 @@ def main():
                "  ecs              Inspect ECS tasks, secrets, and exec settings\n"
                "  beanstalk        Dump Beanstalk environment variables\n"
                "  snapshots        Check EBS/RDS snapshots for public exposure\n"
-               "  cloudformation   Identify roles passed to CloudFormation\n"
+               "  cloudformation   Dump visible parameters and stack outputs in CloudFormation\n"
                "  glue-env         Dump Glue job configurations and secrets\n"
                "  glue-code        Download Glue job script files\n"
                "  codebuild        Review CodeBuild env + privilege settings\n"
