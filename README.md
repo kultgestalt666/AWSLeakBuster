@@ -30,7 +30,9 @@ python cli.py --profile <aws-profile> --scan ssm
 
 Scan multiple sources at once:
 
-TODO
+```bash
+python cli.py --profile <aws-profile> --scan ssm-parameters ec2
+```
 
 ## 📁 Example Output
 
