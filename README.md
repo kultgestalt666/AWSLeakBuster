@@ -55,6 +55,31 @@ python cli.py --profile <aws-profile> --scan ssm-parameters ec2
    pip install -r requirements.txt
    ```
 
+## 📦 Supported Scan Modules
+
+| Module           | Description                                                                |
+|------------------|----------------------------------------------------------------------------|
+| `ssm-parameters` | Scan SSM Parameters for sensitive or exposed values                        |
+| `ssm-documents`  | Analyze SSM Documents for insecure automation or hardcoded credentials     |
+| `secrets`        | Extract readable secrets from Secrets Manager                              |
+| `ec2`            | Read EC2 UserData scripts for embedded secrets                             |
+| `lambda-env`     | Dump Lambda environment variables                                          |
+| `lambda-code`    | Download Lambda function code archives                                     |
+| `s3`             | Check bucket public access, write access, and cleartext settings           |
+| `ecs`            | Inspect ECS tasks for environment secrets, exec access, and logging        |
+| `beanstalk`      | Read Elastic Beanstalk environment variables                               |
+| `snapshots`      | Identify publicly exposed EBS and RDS snapshots                            |
+| `cloudformation` | List IAM roles passed to CloudFormation stacks                             |
+| `glue-env`       | Extract Glue job settings and linked secrets                               |
+| `glue-code`      | Download Glue job scripts from S3                                          |
+| `codebuild`      | Analyze CodeBuild projects for privilege escalation and secrets            |
+| `cognito`        | List Cognito Identity Pools with unauthenticated access enabled            |
+| `sqs`            | Analyze SQS queue policies and optionally dump readable messages           |
+| `sns`            | Review SNS topic access and subscription exposure                          |
+| `apigateway`     | Check API Gateway stages for public exposure                               |
+| `eventbridge`    | List EventBridge rules and targets for leak potential                      |
+
+
 ## 🧪 Project Status
 
 This is a **personal project in early development**.  
